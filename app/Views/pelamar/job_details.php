@@ -1,6 +1,32 @@
 <?= $this->extend('pelamar/templates/index'); ?>
 
 <?= $this->section('page-content'); ?>
+<?php
+function tgl_indo($tanggal)
+{
+    $bulan = array(
+        1 =>   'Januari',
+        'Februari',
+        'Maret',
+        'April',
+        'Mei',
+        'Juni',
+        'Juli',
+        'Agustus',
+        'September',
+        'Oktober',
+        'November',
+        'Desember'
+    );
+    $pecahkan = explode('-', $tanggal);
+
+    // variabel pecahkan 0 = tanggal
+    // variabel pecahkan 1 = bulan
+    // variabel pecahkan 2 = tahun
+
+    return $pecahkan[2] . ' ' . $bulan[(int)$pecahkan[1]] . ' ' . $pecahkan[0];
+}
+?>
 <!-- job post company Start -->
 <div class="job-post-company pt-50 pb-50">
     <div class="container">
@@ -24,7 +50,7 @@
                             </li>
                             <li>
                                 <label class="label">Deadline</label>
-                                <span class="detail-desc text-dark"><?= date('d F Y', strtotime($lowongan['deadline'])); ?></span>
+                                <span class="detail-desc text-dark"><?= tgl_indo(date('Y-m-d', strtotime($lowongan['deadline']))); ?></span>
                             </li>
                         </ul>
                     </div>
@@ -39,12 +65,14 @@
             </div>
         </div>
         <div class="px-3">
-            <div class="post-details1 mb-50">
+            <div class="post-details2 mb-50">
                 <!-- Small Section Tittle -->
                 <div class="small-section-tittle">
                     <h4>Deskripsi Pekerjaan</h4>
                 </div>
-                <p><?= $lowongan['deskripsi']; ?></p>
+                <div>
+                    <?= $lowongan['deskripsi']; ?>
+                </div>
             </div>
             <div class="post-details2  mb-50">
                 <!-- Small Section Tittle -->

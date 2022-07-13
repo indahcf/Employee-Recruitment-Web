@@ -13,9 +13,10 @@
     <div class="card shadow mb-4">
         <div class="card-header">
             <form action="<?php echo base_url('/lamaran/index') ?>" method="get" class="form-inline">
-                <div class="form-group">
+                <div class="form-group mr-3">
                     <input type="date" name="tgl_awal" id="tgl_awal" class="form-control" value="<?= @$_GET['tgl_awal'] ?>">
                 </div>
+                <div>s/d</div>
                 <div class="form-group mx-sm-3">
                     <input type="date" name="tgl_akhir" id="tgl_akhir" class="form-control" value="<?= @$_GET['tgl_akhir'] ?>">
                 </div>
@@ -32,6 +33,7 @@
                     <thead>
                         <tr>
                             <th style="max-width:25px;">No</th>
+                            <th>ID Lamaran</th>
                             <th>Nama Pelamar</th>
                             <th>Divisi</th>
                             <th>Tanggal Lamaran</th>
@@ -44,6 +46,7 @@
                         <?php foreach ($lamaran as $l) : ?>
                             <tr>
                                 <td scope="row"><?= $i++; ?></td>
+                                <td>RU<?= str_pad($l['id_lamaran'], 5, "0", STR_PAD_LEFT); ?></td>
                                 <td><?= $l['fullname']; ?></td>
                                 <td><?= $l['nama_divisi']; ?></td>
                                 <td><?= date('d-m-Y', strtotime($l['tgl_lamaran'])); ?></td>

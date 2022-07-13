@@ -41,7 +41,7 @@ class Pengguna extends BaseController
             if (!empty($filter)) {
                 $lowongan = $this->lowonganModel->filterLowongan($filter);
             } else {
-                $lowongan = $this->lowonganModel->getLowongan();
+                $lowongan = $this->lowonganModel->deadlineLowongan();
             }
 
             $data = [

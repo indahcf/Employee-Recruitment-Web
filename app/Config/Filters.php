@@ -26,6 +26,9 @@ class Filters extends BaseConfig
         'login'      => \Myth\Auth\Filters\LoginFilter::class,
         'role'       => \Myth\Auth\Filters\RoleFilter::class,
         'permission' => \Myth\Auth\Filters\PermissionFilter::class,
+        'admin' => \App\Filters\AdminFilter::class,
+        'hrd' => \App\Filters\HRDFilter::class,
+        'pelamar' => \App\Filters\PelamarFilter::class
     ];
 
     /**

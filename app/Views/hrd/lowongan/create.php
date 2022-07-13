@@ -87,6 +87,7 @@
                 </div>
             </form>
             <script>
+                CKEDITOR.replace('deskripsi');
                 CKEDITOR.replace('persyaratan');
                 CKEDITOR.replace('skills');
             </script>

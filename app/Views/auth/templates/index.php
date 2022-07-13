@@ -20,13 +20,6 @@
     <!-- Custom styles for this template-->
     <link href="<?= base_url(); ?>/css/sb-admin-2.min.css" rel="stylesheet">
 
-    <!-- <style>
-        body {
-            font-family: 'Poppins',
-                sans-serif !important;
-        }
-    </style> -->
-
 </head>
 
 <body class="bg-gradient-primary">

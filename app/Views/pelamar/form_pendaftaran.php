@@ -117,10 +117,10 @@
                         </div>
                     </div>
                     <div class="form-group col-md-6">
-                        <label for="resume" class="col-form-label">Resume</label>
-                        <input type="file" class="form-control-file <?= ($validation->hasError('resume')) ? 'is-invalid' : ''; ?>" name="resume" id="resume" value="<?= old('resume'); ?>">
+                        <label for="cv" class="col-form-label">CV</label>
+                        <input type="file" class="form-control-file <?= ($validation->hasError('cv')) ? 'is-invalid' : ''; ?>" name="cv" id="cv" value="<?= old('cv'); ?>">
                         <div class="invalid-feedback">
-                            <?= $validation->getError('resume'); ?>
+                            <?= $validation->getError('cv'); ?>
                         </div>
                     </div>
                 </div>

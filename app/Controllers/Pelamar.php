@@ -24,7 +24,7 @@ class Pelamar extends BaseController
     {
         $data = [
             'title' => 'Riwayat Lamaran',
-            'lamaran' => $this->lamaranModel->getLamaran()
+            'lamaran' => $this->lamaranModel->getLamaranUser()
         ];
         return view('pelamar/riwayat_lamaran', $data);
     }
@@ -52,8 +52,11 @@ class Pelamar extends BaseController
 
     public function create()
     {
-        if ($this->lamaranModel->countStatusIsOpen()) {
+        // dd(user_id());
+        // dd($this->lamaranModel->countStatusIsOpen());
+        if ($this->lamaranModel->countStatusIsOpen() > 0) {
             session()->setFlashdata('pesan', 'Maaf, Anda belum boleh melamar terlebih dahulu karena Anda sedang melamar/sudah diterima di posisi ini.');
+            return redirect()->to('/pelamar/form_pendaftaran');
         }
 
         //validasi input
@@ -135,9 +138,9 @@ class Pelamar extends BaseController
                     'required' => '{field} harus diisi.'
                 ]
             ],
-            'resume' => [
-                'rules' => 'uploaded[resume]|max_size[resume,1024]|ext_in[resume,pdf]|mime_in[resume,application/pdf]',
-                'label' => 'Resume',
+            'cv' => [
+                'rules' => 'uploaded[cv]|max_size[cv,1024]|ext_in[cv,pdf]|mime_in[cv,application/pdf]',
+                'label' => 'CV',
                 'errors' => [
                     'uploaded' => '{field} harus diisi.',
                     'max_size' => 'Ukuran file terlalu besar.',
@@ -147,7 +150,7 @@ class Pelamar extends BaseController
             ],
             'no_telepon' => [
                 'rules' => 'required',
-                'label' => 'No telepon',
+                'label' => 'No Telepon',
                 'errors' => [
                     'required' => '{field} harus diisi.'
                 ]
@@ -159,16 +162,18 @@ class Pelamar extends BaseController
         }
 
         // ambil gambar
-        $fileResume = $this->request->getFile('resume');
+        $fileCV = $this->request->getFile('cv');
         $filePortofolio = $this->request->getFile('portofolio');
 
-        if ($fileResume) {
-            $namaResume = $fileResume->getName();
-            $fileResume->move('img', $namaResume);
+        $namaCV = null;
+        if ($fileCV->isValid()) {
+            $namaCV = $fileCV->getRandomName();
+            $fileCV->move('img', $namaCV);
         }
 
-        if ($filePortofolio) {
-            $namaPortofolio = $filePortofolio->getName();
+        $namaPortofolio = null;
+        if ($filePortofolio->isValid()) {
+            $namaPortofolio = $filePortofolio->getRandomName();
             $filePortofolio->move('img', $namaPortofolio);
         }
 
@@ -188,14 +193,14 @@ class Pelamar extends BaseController
             'alamat' => $this->request->getVar('alamat'),
             'ipk' => $this->request->getVar('ipk'),
             'email' => $this->request->getVar('email'),
-            'resume' => $namaResume,
-            'no_hp' => $this->request->getVar('no_telepon'),
-            'portofolio' => $namaPortofolio
+            'no_hp' => $this->request->getVar('no_telepon')
         ]);
 
         $this->lamaranModel->save([
             'id' => user_id(),
-            'id_lowongan' => $id_lowongan
+            'id_lowongan' => $id_lowongan,
+            'cv' => $namaCV,
+            'portofolio' => $namaPortofolio
         ]);
 
         session()->setFlashdata('pesan', 'Selamat! Anda telah berhasil mengisi lamaran pada ' . $nama_divisi . '. Anda dapat memantau proses rekrutmen melalui halaman Riwayat Lamaran.');
@@ -222,7 +227,7 @@ class Pelamar extends BaseController
             if (!empty($filter)) {
                 $lowongan = $this->lowonganModel->filterLowongan($filter);
             } else {
-                $lowongan = $this->lowonganModel->getLowongan();
+                $lowongan = $this->lowonganModel->deadlineLowongan();
             }
 
             $data = [

@@ -18,6 +18,7 @@
                     <thead>
                         <tr>
                             <th style="max-width:25px;">No</th>
+                            <th>ID Lamaran</th>
                             <th>Divisi</th>
                             <th>Tanggal Lamaran</th>
                             <th>Status</th>
@@ -29,6 +30,7 @@
                         <?php foreach ($lamaran as $l) : ?>
                             <tr>
                                 <td scope="row"><?= $i++; ?></td>
+                                <td>RU<?= str_pad($l['id_lamaran'], 5, "0", STR_PAD_LEFT); ?></td>
                                 <td><?= $l['nama_divisi']; ?></td>
                                 <td><?= $l['tgl_lamaran']; ?></td>
                                 <td><?= $l['status_lamaran']; ?></td>

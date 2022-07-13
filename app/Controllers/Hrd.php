@@ -3,21 +3,37 @@
 namespace App\Controllers;
 
 use App\Models\UserModel;
+use App\Models\LowonganModel;
+use App\Models\LamaranModel;
+use App\Models\KategoriModel;
 
 class Hrd extends BaseController
 {
     protected $auth;
     protected $userModel;
+    protected $lowonganModel;
+    protected $lamaranModel;
     public function __construct()
     {
         $this->auth = service('authentication');
         $this->userModel = new UserModel();
+        $this->lowonganModel = new LowonganModel();
+        $this->lamaranModel = new LamaranModel();
+        $this->kategoriModel = new KategoriModel();
     }
 
     public function index()
     {
-        // dd($this->auth->user()->getRoles());
-        $data['title'] = 'Dashboard HRD';
+        $jumlahLowongan = $this->lowonganModel->get()->resultID->num_rows;
+        $jumlahLamaran = $this->lamaranModel->get()->resultID->num_rows;
+        $jumlahKategori = $this->kategoriModel->get()->resultID->num_rows;
+        $data = [
+            'title' => 'Dashboard',
+            'jumlahLowongan' => $jumlahLowongan,
+            'jumlahLamaran' => $jumlahLamaran,
+            'jumlahKategori' => $jumlahKategori
+        ];
+
         return view('hrd/dashboard/index', $data);
     }
 

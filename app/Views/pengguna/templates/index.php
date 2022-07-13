@@ -76,7 +76,7 @@
         </div>
         <!-- Header End -->
     </header>
-    <main>
+    <main style="min-height: 100vh;">
 
         <?= $this->renderSection('page-content'); ?>
 

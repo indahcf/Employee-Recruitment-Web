@@ -9,6 +9,12 @@
     <div class="card shadow mb-3">
         <div class="card-body">
             <div class="form-group row">
+                <label for="nama_lengkap" class="col-sm-3">ID Lamaran</label>
+                <div class="col-sm-9">
+                    RU<?= str_pad($lamaran['id_lamaran'], 5, "0", STR_PAD_LEFT); ?>
+                </div>
+            </div>
+            <div class="form-group row">
                 <label for="nama_lengkap" class="col-sm-3">Nama Lengkap</label>
                 <div class="col-sm-9">
                     <?= $lamaran['fullname']; ?>
@@ -81,16 +87,16 @@
                 </div>
             </div>
             <div class="form-group row">
-                <label for="resume" class="col-sm-3">Resume</label>
+                <label for="cv" class="col-sm-3">CV</label>
                 <div class="col-sm-9">
-                    <a href="/hrd/lamaran/download_resume/<?= $lamaran['id']; ?>" class="btn btn-info">Unduh <i class="fa fa-download"></i></a>
+                    <a href="/hrd/lamaran/download_cv/<?= $lamaran['id_lamaran']; ?>" class="btn btn-info">Unduh <i class="fa fa-download"></i></a>
                 </div>
             </div>
             <div class="form-group row">
                 <label for="portofolio" class="col-sm-3 col-form-label">Portofolio</label>
                 <div class="col-sm-9">
                     <?php if ($lamaran['portofolio'] != null || $lamaran['portofolio'] != "") : ?>
-                        <a href="/hrd/lamaran/download_portofolio/<?= $lamaran['id']; ?>" class="btn btn-info">Unduh <i class="fa fa-download"></i></a>
+                        <a href="/hrd/lamaran/download_portofolio/<?= $lamaran['id_lamaran']; ?>" class="btn btn-info">Unduh <i class="fa fa-download"></i></a>
                     <?php endif; ?>
                 </div>
             </div>

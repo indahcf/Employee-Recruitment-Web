@@ -3,6 +3,7 @@
 namespace App\Models;
 
 use CodeIgniter\Model;
+use CodeIgniter\I18n\Time;
 
 class LowonganModel extends Model
 {
@@ -30,6 +31,11 @@ class LowonganModel extends Model
 
     public function filterLowongan($id_kategori)
     {
-        return $this->join('kategori', 'lowongan.id_kategori=kategori.id_kategori')->whereIn('lowongan.id_kategori', $id_kategori)->findAll();
+        return $this->join('kategori', 'lowongan.id_kategori=kategori.id_kategori')->whereIn('lowongan.id_kategori', $id_kategori)->where('deadline >=', Time::today())->findAll();
+    }
+
+    public function deadlineLowongan()
+    {
+        return $this->join('kategori', 'lowongan.id_kategori=kategori.id_kategori')->where('deadline >=', Time::today())->findAll();
     }
 }

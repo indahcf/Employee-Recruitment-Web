@@ -8,6 +8,7 @@ use Dompdf\Dompdf;
 
 class Lamaran extends BaseController
 {
+    protected $lamaranModel;
     public function __construct()
     {
         $this->lamaranModel = new LamaranModel();
@@ -22,7 +23,7 @@ class Lamaran extends BaseController
             $lamaran = $this->lamaranModel->getLamaran();
             $url_cetak = 'lamaran/print';
             $label = 'Semua Data Lamaran';
-        } else { // Jika terisi
+        } else {
             $lamaran = $this->lamaranModel->view_by_date($tgl_awal, $tgl_akhir);
             $url_cetak = 'lamaran/print?tgl_awal=' . $tgl_awal . '&tgl_akhir=' . $tgl_akhir;
             $tgl_awal = date('d-m-Y', strtotime($tgl_awal));
@@ -47,7 +48,7 @@ class Lamaran extends BaseController
         if (empty($tgl_awal) or empty($tgl_akhir)) {
             $lamaran = $this->lamaranModel->getLamaran();
             $label = 'Semua Data Lamaran';
-        } else { // Jika terisi
+        } else {
             $lamaran = $this->lamaranModel->view_by_date($tgl_awal, $tgl_akhir);
             $tgl_awal = date('d-m-Y', strtotime($tgl_awal));
             $tgl_akhir = date('d-m-Y', strtotime($tgl_akhir));
@@ -69,6 +70,7 @@ class Lamaran extends BaseController
 
     public function update_status()
     {
+
         $id_lamaran = $this->request->getVar('id_lamaran');
         $this->lamaranModel->save([
             'id_lamaran' => $id_lamaran,
@@ -89,17 +91,15 @@ class Lamaran extends BaseController
         return view('hrd/lamaran/detail', $data);
     }
 
-    function download_resume($id)
+    function download_cv($id)
     {
-        $resume = new userModel();
-        $data = $resume->find($id);
-        return $this->response->download('img/' . $data->resume, null);
+        $data = $this->lamaranModel->find($id);
+        return $this->response->download('img/' . $data['cv'], null);
     }
 
     function download_portofolio($id)
     {
-        $portofolio = new userModel();
-        $data = $portofolio->find($id);
-        return $this->response->download('img/' . $data->portofolio, null);
+        $data = $this->lamaranModel->find($id);
+        return $this->response->download('img/' . $data['portofolio'], null);
     }
 }
