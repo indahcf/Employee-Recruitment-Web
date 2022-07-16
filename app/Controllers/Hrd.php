@@ -6,6 +6,7 @@ use App\Models\UserModel;
 use App\Models\LowonganModel;
 use App\Models\LamaranModel;
 use App\Models\KategoriModel;
+use App\Models\UsersModel;
 
 class Hrd extends BaseController
 {
@@ -13,6 +14,7 @@ class Hrd extends BaseController
     protected $userModel;
     protected $lowonganModel;
     protected $lamaranModel;
+    protected $usersModel;
     public function __construct()
     {
         $this->auth = service('authentication');
@@ -20,6 +22,7 @@ class Hrd extends BaseController
         $this->lowonganModel = new LowonganModel();
         $this->lamaranModel = new LamaranModel();
         $this->kategoriModel = new KategoriModel();
+        $this->usersModel = new UsersModel();
     }
 
     public function index()
@@ -27,11 +30,13 @@ class Hrd extends BaseController
         $jumlahLowongan = $this->lowonganModel->get()->resultID->num_rows;
         $jumlahLamaran = $this->lamaranModel->get()->resultID->num_rows;
         $jumlahKategori = $this->kategoriModel->get()->resultID->num_rows;
+        $jumlahUsers = $this->usersModel->get()->resultID->num_rows;
         $data = [
             'title' => 'Dashboard',
             'jumlahLowongan' => $jumlahLowongan,
             'jumlahLamaran' => $jumlahLamaran,
-            'jumlahKategori' => $jumlahKategori
+            'jumlahKategori' => $jumlahKategori,
+            'jumlahUsers' => $jumlahUsers
         ];
 
         return view('hrd/dashboard/index', $data);
