@@ -13,7 +13,7 @@ class LamaranModel extends Model
     public function getLamaran($id_lamaran = false)
     {
         if ($id_lamaran == false) {
-            return $this->select('users.fullname, lamaran.*, lowongan.nama_divisi')->join('users', 'lamaran.id=users.id')->join('lowongan', 'lamaran.id_lowongan=lowongan.id_lowongan')->findAll();
+            return $this->select('users.fullname, lamaran.*, lowongan.nama_divisi')->join('users', 'lamaran.id=users.id')->join('lowongan', 'lamaran.id_lowongan=lowongan.id_lowongan')->orderBy('tgl_lamaran')->findAll();
         }
 
         return $this->select('users.*, lamaran.*, lowongan.nama_divisi')->where(['lamaran.id_lamaran' => $id_lamaran])->join('users', 'lamaran.id=users.id')->join('lowongan', 'lamaran.id_lowongan=lowongan.id_lowongan')->first();

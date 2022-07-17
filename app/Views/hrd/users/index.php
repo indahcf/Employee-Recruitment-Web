@@ -15,7 +15,7 @@
     <!-- DataTales Example -->
     <div class="card shadow mb-4">
         <div class="card-header">
-            <a href="/admin/users/create" class="btn btn-primary btn-icon-split">
+            <a href="/hrd/users/create" class="btn btn-primary btn-icon-split">
                 <span class="icon text-white-50">
                     <i class="fas fa-plus"></i>
                 </span>
@@ -45,9 +45,9 @@
                                 <td><?= $u['no_hp']; ?></td>
                                 <td><?= $u['role']; ?></td>
                                 <td>
-                                    <a href="/admin/users/ubah_password/<?= $u['id']; ?>" class="btn btn-primary"><i class="fas fa-key"></i></a>
-                                    <a href="/admin/users/edit/<?= $u['id']; ?>" class="btn btn-warning"><i class="fas fa-edit"></i></a>
-                                    <form action="/admin/users/<?= $u['id']; ?>" method="post" class="d-inline">
+                                    <a href="/hrd/users/ubah_password/<?= $u['id']; ?>" class="btn btn-primary"><i class="fas fa-key"></i></a>
+                                    <a href="/hrd/users/edit/<?= $u['id']; ?>" class="btn btn-warning"><i class="fas fa-edit"></i></a>
+                                    <form action="/hrd/users/<?= $u['id']; ?>" method="post" class="d-inline">
                                         <?= csrf_field(); ?>
                                         <input type="hidden" name="_method" value="DELETE">
                                         <button type="submit" class="btn btn-danger" onclick="return confirm('Apakah Anda yakin akan menghapus?')"><i class="fas fa-trash"></i></button>

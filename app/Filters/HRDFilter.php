@@ -35,7 +35,7 @@ class HRDFilter implements FilterInterface
 		}
         else
         {
-            if($authenticate->user()->role !== 'hrd')
+            if($authenticate->user()->role !== 'hrd' AND $authenticate->user()->role !== 'admin')
 			{
 				return redirect('login');
 			}

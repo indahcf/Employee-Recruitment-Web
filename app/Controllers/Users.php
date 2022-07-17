@@ -102,14 +102,14 @@ class Users extends BaseController
 
         session()->setFlashdata('pesan', 'Data berhasil ditambahkan.');
 
-        return redirect()->to('/admin/users');
+        return redirect()->to('/hrd/users');
     }
 
     public function delete($id)
     {
         $this->usersModel->delete($id);
         session()->setFlashdata('pesan', 'Data berhasil dihapus.');
-        return redirect()->to('/admin/users');
+        return redirect()->to('/hrd/users');
     }
 
     public function edit($id)
@@ -151,7 +151,7 @@ class Users extends BaseController
             ]
         ])) {
             $validation = \Config\Services::validation();
-            return redirect()->to('/users/create')->withInput()->with('validation', $validation->getErrors());
+            return redirect()->to('/hrd/users/edit/' . $this->request->getVar('id'))->withInput()->with('validation', $validation->getErrors());
         }
 
         $password = $this->request->getVar('password');
@@ -164,13 +164,13 @@ class Users extends BaseController
 
         session()->setFlashdata('pesan', 'Data berhasil diubah.');
 
-        return redirect()->to('/admin/users');
+        return redirect()->to('/hrd/users');
     }
 
     public function ubah_password($id)
     {
         $data = [
-            'title' => 'Ubah Password',
+            'title' => 'Ubah Password Users',
             'validation' => \Config\Services::validation(),
             'users' => $this->usersModel->getUsers($id)
         ];
@@ -207,7 +207,7 @@ class Users extends BaseController
             ]
         ])) {
             $validation = \Config\Services::validation();
-            return redirect()->to('/admin/users/' . $this->request->getVar('id'))->withInput()->with('validation', $validation->getErrors());
+            return redirect()->to('/hrd/users/' . $this->request->getVar('id'))->withInput()->with('validation', $validation->getErrors());
         }
 
         $userModel = new UsersModel();
@@ -221,6 +221,6 @@ class Users extends BaseController
         } else {
             session()->setFlashdata('pesan', 'Password yang Anda masukan salah!');
         }
-        return redirect()->to('/admin/users');
+        return redirect()->to('/hrd/users');
     }
 }
