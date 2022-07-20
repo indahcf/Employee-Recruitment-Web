@@ -34,6 +34,6 @@ class LamaranModel extends Model
     public function view_by_date($tgl_awal, $tgl_akhir)
     {
         $new_tgl_akhir = date('Y-m-d', strtotime('+1 days', strtotime($tgl_akhir)));
-        return $this->select('users.fullname, lamaran.*, lowongan.nama_divisi')->join('users', 'lamaran.id=users.id')->join('lowongan', 'lamaran.id_lowongan=lowongan.id_lowongan')->where('tgl_lamaran BETWEEN "' . $tgl_awal . '" AND "' . $new_tgl_akhir . '"')->findAll();
+        return $this->select('users.fullname, lamaran.*, lowongan.nama_divisi')->join('users', 'lamaran.id=users.id')->join('lowongan', 'lamaran.id_lowongan=lowongan.id_lowongan')->where('tgl_lamaran BETWEEN "' . $tgl_awal . '" AND "' . $new_tgl_akhir . '"')->orderBy('tgl_lamaran')->findAll();
     }
 }

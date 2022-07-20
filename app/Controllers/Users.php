@@ -207,7 +207,7 @@ class Users extends BaseController
             ]
         ])) {
             $validation = \Config\Services::validation();
-            return redirect()->to('/hrd/users/' . $this->request->getVar('id'))->withInput()->with('validation', $validation->getErrors());
+            return redirect()->to('/hrd/users/ubah_password/' . $this->request->getVar('id'))->withInput()->with('validation', $validation->getErrors());
         }
 
         $userModel = new UsersModel();
