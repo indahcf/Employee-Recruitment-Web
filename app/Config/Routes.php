@@ -80,7 +80,6 @@ $routes->group('hrd', ['filter' => 'hrd'], function ($routes) {
     $routes->get('lamaran/download_cv/(:num)', 'Lamaran::download_cv/$1');
     $routes->get('lamaran/download_portofolio/(:num)', 'Lamaran::download_portofolio/$1');
     $routes->post('lamaran/update_status', 'Lamaran::update_status');
-
     $routes->get('users', 'Users::index', ['filter' => 'admin']);
     $routes->get('users/create', 'Users::create', ['filter' => 'admin']);
     $routes->get('users/ubah_password/(:num)', 'Users::ubah_password/$1', ['filter' => 'admin']);
