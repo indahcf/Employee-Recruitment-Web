@@ -16,6 +16,7 @@
         <div class="card-body">
             <form action="/users/update_password/<?= $users['id']; ?>" method="post">
                 <?= csrf_field(); ?>
+                <input type="hidden" class="form-control" id="id" name="id" value="<?= user_id(); ?>">
                 <div class="form-group row">
                     <label for="password_lama" class="col-sm-2 col-form-label">Password Lama</label>
                     <div class="col-sm-10">

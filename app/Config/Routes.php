@@ -36,31 +36,31 @@ $routes->get('/job_listing', 'Pengguna::job_listing');
 $routes->get('/job_details/(:num)', 'Pengguna::job_details/$1');
 $routes->post('/pengguna/ajax_lowongan', 'Pengguna::ajax_lowongan');
 
-$routes->group('admin', ['filter' => 'admin'], function ($routes) {
-    $routes->get('/', 'Hrd::index');
+// $routes->group('admin', ['filter' => 'admin'], function ($routes) {
+//     $routes->get('/', 'Hrd::index');
 
-    $routes->get('kategori', 'Kategori::index');
-    $routes->get('kategori/create', 'Kategori::create');
-    $routes->get('kategori/edit/(:segment)', 'Kategori::edit/$1');
-    $routes->delete('kategori/(:num)', 'Kategori::delete/$1');
+//     $routes->get('kategori', 'Kategori::index');
+//     $routes->get('kategori/create', 'Kategori::create');
+//     $routes->get('kategori/edit/(:segment)', 'Kategori::edit/$1');
+//     $routes->delete('kategori/(:num)', 'Kategori::delete/$1');
 
-    $routes->get('lowongan', 'Lowongan::index');
-    $routes->get('lowongan/create', 'Lowongan::create');
-    $routes->get('lowongan/edit/(:num)', 'Lowongan::edit/$1');
-    $routes->delete('lowongan/(:num)', 'Lowongan::delete/$1');
+//     $routes->get('lowongan', 'Lowongan::index');
+//     $routes->get('lowongan/create', 'Lowongan::create');
+//     $routes->get('lowongan/edit/(:num)', 'Lowongan::edit/$1');
+//     $routes->delete('lowongan/(:num)', 'Lowongan::delete/$1');
 
-    $routes->get('lamaran', 'Lamaran::index');
-    $routes->get('lamaran/detail/(:num)', 'Lamaran::detail/$1');
-    $routes->get('lamaran/download_cv/(:num)', 'Lamaran::download_cv/$1');
-    $routes->get('lamaran/download_portofolio/(:num)', 'Lamaran::download_portofolio/$1');
-    $routes->post('lamaran/update_status', 'Lamaran::update_status');
+//     $routes->get('lamaran', 'Lamaran::index');
+//     $routes->get('lamaran/detail/(:num)', 'Lamaran::detail/$1');
+//     $routes->get('lamaran/download_cv/(:num)', 'Lamaran::download_cv/$1');
+//     $routes->get('lamaran/download_portofolio/(:num)', 'Lamaran::download_portofolio/$1');
+//     $routes->post('lamaran/update_status', 'Lamaran::update_status');
 
-    $routes->get('users', 'Users::index');
-    $routes->get('users/create', 'Users::create');
-    $routes->get('users/ubah_password/(:num)', 'Users::ubah_password/$1');
-    $routes->get('users/edit/(:num)', 'Users::edit/$1');
-    $routes->delete('users/(:num)', 'Users::delete/$1');
-});
+//     $routes->get('users', 'Users::index');
+//     $routes->get('users/create', 'Users::create');
+//     $routes->get('users/ubah_password/(:num)', 'Users::ubah_password/$1');
+//     $routes->get('users/edit/(:num)', 'Users::edit/$1');
+//     $routes->delete('users/(:num)', 'Users::delete/$1');
+// });
 
 $routes->group('hrd', ['filter' => 'hrd'], function ($routes) {
     $routes->get('/', 'Hrd::index');
@@ -80,6 +80,12 @@ $routes->group('hrd', ['filter' => 'hrd'], function ($routes) {
     $routes->get('lamaran/download_cv/(:num)', 'Lamaran::download_cv/$1');
     $routes->get('lamaran/download_portofolio/(:num)', 'Lamaran::download_portofolio/$1');
     $routes->post('lamaran/update_status', 'Lamaran::update_status');
+
+    $routes->get('users', 'Users::index', ['filter' => 'admin']);
+    $routes->get('users/create', 'Users::create', ['filter' => 'admin']);
+    $routes->get('users/ubah_password/(:num)', 'Users::ubah_password/$1', ['filter' => 'admin']);
+    $routes->get('users/edit/(:num)', 'Users::edit/$1', ['filter' => 'admin']);
+    $routes->delete('users/(:num)', 'Users::delete/$1', ['filter' => 'admin']);
 });
 
 $routes->group('pelamar', ['filter' => 'pelamar'], function ($routes) {
