@@ -10,14 +10,11 @@ The Website Based Employee Recruitment Information System at PT Noto Teknologi I
 
 ## Who are the users of the Website Based Employee Recruitment Information System at PT Noto Teknologi Indonesia?
 
-- Admin
-  Admin is a user who has the highest position in the system. Admins can manage users, manage job category data, manage job vacancy data, and manage job application data.
+- Admin: Admin is a user who has the highest position in the system. Admins can manage users, manage job category data, manage job vacancy data, and manage job application data.
   
-- HRD (Human Resource Development)
-  HRD is a user who can manage job category data, manage job vacancy data, and manage job application data.
+- HRD (Human Resource Development): HRD is a user who can manage job category data, manage job vacancy data, and manage job application data.
   
-- Applicants
-  Applicants are users who can only view a list of job vacancies, view job vacancy details, register for applications, and view job application history.
+- Applicants: Applicants are users who can only view a list of job vacancies, view job vacancy details, register for applications, and view job application history.
 
 ## Tech Stack
 
