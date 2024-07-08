@@ -1,33 +1,43 @@
-# Sistem Informasi Penerimaan Pegawai Berbasis Website di PT Noto Teknologi Indonesia
+# Website Based Employee Recruitment Information System at PT Noto Teknologi Indonesia
 
-## Apa itu Sistem Informasi Penerimaan Pegawai Berbasis Website di PT Noto Teknologi Indonesia?
+## What is a Web Based Employee Recruitment Information System at PT Noto Teknologi Indonesia?
 
-Sistem Informasi Penerimaan Pegawai Berbasis Website di PT Noto Teknologi Indonesia adalah Sistem Informasi yang membantu proses penerimaan pegawai di PT Noto Teknologi Indonesia.
+Website Based Employee Recruitment Information System at PT Noto Teknologi Indonesia is an information system that helps the employee recruitment process at PT Noto Teknologi Indonesia.
 
-## Untuk siapa?
+## For whom?
 
-Sistem Informasi Penerimaan Pegawai Berbasis Website di PT Noto Teknologi Indonesia cocok digunakan untuk seseorang yang sedang mencari pekerjaan dan HRD yang sedang mencari calon pegawai untuk diseleksi menjadi pegawai di PT Noto Teknologi Indonesia.
+The Website Based Employee Recruitment Information System at PT Noto Teknologi Indonesia is suitable for someone who is looking for a job and HRD who is looking for prospective employees to be selected as employees at PT Noto Teknologi Indonesia.
+
+## Who are the users of the Website Based Employee Recruitment Information System at PT Noto Teknologi Indonesia?
+
+- Admin
+  Admin is a user who has the highest position in the system. Admins can manage users, manage job category data, manage job vacancy data, and manage job application data.
+  
+- HRD (Human Resource Development)
+  HRD is a user who can manage job category data, manage job vacancy data, and manage job application data.
+  
+- Applicants
+  Applicants are users who can only view a list of job vacancies, view job vacancy details, register for applications, and view job application history.
 
 ## Tech Stack
 
-Teknologi yang digunakan dalam membangun sistem ini adalah:
-- PHP: Bahasa pemrograman untuk backend web yang populer.
-- CodeIgniter: Framework PHP yang bersifat open source dan
-menggunakan metode MVC (Model, View, Controller).
-- MySQL: Relasional Database yang populer menggunakan bahasa SQL.
-- JavaScript: Bahasa pemrograman yang digunakan untuk membuat halaman web menjadi interaktif dan dinamis.
+The technologies used in building this system are:
+- PHP: A popular programming language for web backends.
+- CodeIgniter: PHP framework that is open source and using the MVC (Model, View, Controller) method.
+- MySQL: A popular relational database that uses the SQL language.
+- JavaScript: A programming language used to make web pages interactive and dynamic.
 
 ## Tools
 
-Berikut adalah tools yang kami gunakan untuk membangun aplikasi:
+Here are the tools we used to build the application:
 
-- Figma: Tools Untuk untuk mendesain tampilan.
+- Figma: Tools for designing the interface.
 - Visual Studio Code: Code Editor.
 - Git: Version Control Systems.
-- GitHub: Layanan hos web bersama untuk proyek pengembangan perangkat lunak yang menggunakan sistem kendali versi Git dan layanan hosting internet.
-- XAMPP: Alat pembangun server lokal yang membantu pengembangan proyek (Server Apache, Database MySQL, dan penerjemah bahasa PHP dan Perl).
+- GitHub: A shared web hosting service for software development projects that uses the Git version control system and internet hosting services.
+- XAMPP: A local server building tool that helps with project development (Apache Server, MySQL Database, and PHP and Perl language interpreters).
 
-## Fitur Aplikasi
+## Website Features
 
 1. Landing Page
 
@@ -35,12 +45,11 @@ Berikut adalah tools yang kami gunakan untuk membangun aplikasi:
 
    ![1 2](https://github.com/indahcf/Sistem-Informasi-Penerimaan-Pegawai-Berbasis-Website-di-PT-Noto-Teknologi-Indonesia/assets/104883886/a8e7fa3d-e523-47cf-aa4f-5962f3965d0c)
    
-2. Daftar Lowongan Pekerjaan
+2. Job Vacancy List
 
    ![2](https://github.com/indahcf/indahcf.github.io/assets/104883886/79ba4474-6cbf-49a3-b844-1461a0acdb1e)
    
-3. Detail Lowongan Pekerjaan
-
+3. Job Details
    ![3](https://github.com/indahcf/indahcf.github.io/assets/104883886/6a4016d6-a8a0-4d4e-9466-9aebe5b8819c)
 
 4. Register
@@ -55,7 +64,7 @@ Berikut adalah tools yang kami gunakan untuk membangun aplikasi:
 
    ![6](https://github.com/indahcf/indahcf.github.io/assets/104883886/38e923c6-2c98-4734-8fb8-6b389c71f830)
 
-7. CRUD Kategori Pekerjaan
+7. Job Category CRUD 
 
    ![7](https://github.com/indahcf/indahcf.github.io/assets/104883886/bbb73c76-eb0d-43ef-ab7c-4422c3e8181c)
     
@@ -63,7 +72,7 @@ Berikut adalah tools yang kami gunakan untuk membangun aplikasi:
 
    ![9](https://github.com/indahcf/indahcf.github.io/assets/104883886/12236f9e-3ca8-479b-87b9-b0644d9c96a3)
 
-8. CRUD Lowongan Pekerjaan
+8. Job Vacancy CRUD
 
     ![10](https://github.com/indahcf/indahcf.github.io/assets/104883886/ca47ac74-97a3-44d0-9f53-be6caeae7563)
     
@@ -71,43 +80,43 @@ Berikut adalah tools yang kami gunakan untuk membangun aplikasi:
 
     ![12 1](https://github.com/indahcf/indahcf.github.io/assets/104883886/35d0933c-2de4-44ef-a952-d494216216c8)
 
-9. Ubah Password HRD
+9. Change HRD Password
 
    ![16](https://github.com/indahcf/indahcf.github.io/assets/104883886/2cb15c06-1a82-4170-924e-f35f433f62b5)
 
-10. Form Lamaran Pekerjaan
+10. Job Application Form
 
    ![20 1](https://github.com/indahcf/indahcf.github.io/assets/104883886/8c171b6e-52d8-4bc9-97d5-fa09545adb9c)
    
    ![20 2](https://github.com/indahcf/indahcf.github.io/assets/104883886/eaea3f1c-6fe7-44a3-9753-2e6fc6afcab9)
 
-11. Riwayat Lamaran Pekerjaan
+11. Job Application History
 
    ![21](https://github.com/indahcf/indahcf.github.io/assets/104883886/00c63ced-33e9-4806-b742-5969d7bb2e9b)
 
-12. Ubah Password Pelamar
+12. Change Applicant Password
     
     ![23](https://github.com/indahcf/indahcf.github.io/assets/104883886/e2fe97c4-1aa7-4176-b6dc-c73576845a14)
     
-13. Lamaran Pekerjaan
+13. Job Application
 
     ![13 1](https://github.com/indahcf/indahcf.github.io/assets/104883886/824e0634-db7f-494e-9075-8e2818f017bd)
     
-14. Detail Lamaran Pekerjaan
+14. Job Application Details
 
     ![14 1](https://github.com/indahcf/indahcf.github.io/assets/104883886/84248b17-46e0-4535-bfea-51bce2348089)
     
     ![14 2](https://github.com/indahcf/indahcf.github.io/assets/104883886/41a4108e-9f6b-4533-b655-205f9ef9388e)
     
-16. Ubah Status Lamaran Pekerjaan
+15. Change Job Application Status
 
     ![14 4](https://github.com/indahcf/indahcf.github.io/assets/104883886/ee5497e0-0e51-4566-8853-06230a0dcc37)
     
-17. Dashboard Admin
+16. Dashboard Admin
     
     ![24](https://github.com/indahcf/indahcf.github.io/assets/104883886/ad2d1cb0-bdec-4c75-898e-152f175853c2)
     
-18. CRUD Users + Ubah Password Users
+17. Users CRUD + Change Users Password
 
     ![25](https://github.com/indahcf/indahcf.github.io/assets/104883886/b9b10139-738e-47dc-9448-5ca64ef5206b)
     
@@ -117,10 +126,10 @@ Berikut adalah tools yang kami gunakan untuk membangun aplikasi:
 
     ![27](https://github.com/indahcf/Sistem-Informasi-Penerimaan-Pegawai-Berbasis-Website-di-PT-Noto-Teknologi-Indonesia/assets/104883886/cee51838-ba77-4b67-917b-711616398c67)
 
-19. Ubah Password Admin
+18. Change Admin Password
 
     ![29](https://github.com/indahcf/indahcf.github.io/assets/104883886/6d356c24-f084-4790-b30b-35354cb9a640)
 
-20. Logout
+19. Logout
 
     ![17](https://github.com/indahcf/indahcf.github.io/assets/104883886/f1e91e40-9629-4777-8b06-f670d0b0718e)
