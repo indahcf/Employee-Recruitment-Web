@@ -1,63 +1,52 @@
 # CodeIgniter 4 Application Starter
 
-## What is CodeIgniter?
+## Apa itu Sistem Informasi Penerimaan Pegawai Berbasis Website di PT Noto Teknologi Indonesia?
 
-CodeIgniter is a PHP full-stack web framework that is light, fast, flexible and secure.
-More information can be found at the [official site](http://codeigniter.com).
+Sistem Informasi Penerimaan Pegawai Berbasis Website di PT Noto Teknologi Indonesia adalah Sistem Informasi yang membantu proses penerimaan pegawai di PT Noto Teknologi Indonesia.
 
-This repository holds a composer-installable app starter.
-It has been built from the
-[development repository](https://github.com/codeigniter4/CodeIgniter4).
+## Untuk siapa?
 
-More information about the plans for version 4 can be found in [the announcement](http://forum.codeigniter.com/thread-62615.html) on the forums.
+Sistem Informasi Penerimaan Pegawai Berbasis Website di PT Noto Teknologi Indonesia cocok digunakan untuk seseorang yang sedang mencari pekerjaan dan HRD yang sedang mencari calon pegawai untuk diseleksi menjadi pegawai di PT Noto Teknologi Indonesia.
 
-The user guide corresponding to this version of the framework can be found
-[here](https://codeigniter4.github.io/userguide/).
-
-## Installation & updates
-
-`composer create-project codeigniter4/appstarter` then `composer update` whenever
-there is a new release of the framework.
-
-When updating, check the release notes to see if there are any changes you might need to apply
-to your `app` folder. The affected files can be copied or merged from
-`vendor/codeigniter4/framework/app`.
-
-## Setup
+## Installation
 
 Copy `env` to `.env` and tailor for your app, specifically the baseURL
 and any database settings.
 
-## Important Change with index.php
+## Tech Stack
 
-`index.php` is no longer in the root of the project! It has been moved inside the *public* folder,
-for better security and separation of components.
+Teknologi yang digunakan dalam membangun sistem ini adalah:
+- PHP: Bahasa pemrograman untuk backend web yang populer.
+- CodeIgniter: Framework PHP yang bersifat open source dan
+menggunakan metode MVC (Model, View, Controller).
+- MySQL: Relasional Database yang populer menggunakan bahasa SQL.
+- JavaScript: Bahasa pemrograman yang digunakan untuk membuat halaman web menjadi interaktif dan dinamis.
 
-This means that you should configure your web server to "point" to your project's *public* folder, and
-not to the project root. A better practice would be to configure a virtual host to point there. A poor practice would be to point your web server to the project root and expect to enter *public/...*, as the rest of your logic and the
-framework are exposed.
+## Tools
 
-**Please** read the user guide for a better explanation of how CI4 works!
+Berikut adalah tools yang kami gunakan untuk membangun aplikasi:
 
-## Repository Management
+- Figma: Tools Untuk untuk mendesain tampilan.
+- Visual Studio Code: Code Editor.
+- Git: Version Control Systems.
+- GitHub: Layanan hos web bersama untuk proyek pengembangan perangkat lunak yang menggunakan sistem kendali versi Git dan layanan hosting internet.
+- XAMPP: Alat pembangun server lokal yang membantu pengembangan proyek (Server Apache, Database MySQL, dan penerjemah bahasa PHP dan Perl).
 
-We use GitHub issues, in our main repository, to track **BUGS** and to track approved **DEVELOPMENT** work packages.
-We use our [forum](http://forum.codeigniter.com) to provide SUPPORT and to discuss
-FEATURE REQUESTS.
+## Fitur Aplikasi
 
-This repository is a "distribution" one, built by our release preparation script.
-Problems with it can be raised on our forum, or as issues in the main repository.
-
-## Server Requirements
-
-PHP version 7.3 or higher is required, with the following extensions installed:
-
-- [intl](http://php.net/manual/en/intl.requirements.php)
-- [libcurl](http://php.net/manual/en/curl.requirements.php) if you plan to use the HTTP\CURLRequest library
-
-Additionally, make sure that the following extensions are enabled in your PHP:
-
-- json (enabled by default - don't turn it off)
-- [mbstring](http://php.net/manual/en/mbstring.installation.php)
-- [mysqlnd](http://php.net/manual/en/mysqlnd.install.php)
-- xml (enabled by default - don't turn it off)
+1. Landing Page
+   ![1 1](https://github.com/indahcf/indahcf.github.io/assets/104883886/cb448786-52f7-41fe-8f16-60754c6c6a8a)
+3. Daftar Lowongan Pekerjaan
+4. Detail Lowongan Pekerjaan
+5. Login
+6. Register
+7. Form Lamaran Pekerjaan
+8. Riwayat Lamaran Pekerjaan
+9. CRUD Kategori Pekerjaan
+10. CRUD Lowongan Pekerjaan
+11. Lamaran Pekerjaan
+12. Detail Lamaran Pekerjaan
+13. Ubah Status Lamaran Pekerjaan
+14. CRUD Users + Ubah Password Users
+15. Ubah Password
+16. Logout
