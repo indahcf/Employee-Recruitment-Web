@@ -1,4 +1,4 @@
-# CodeIgniter 4 Application Starter
+# Sistem Informasi Penerimaan Pegawai Berbasis Website di PT Noto Teknologi Indonesia
 
 ## Apa itu Sistem Informasi Penerimaan Pegawai Berbasis Website di PT Noto Teknologi Indonesia?
 
