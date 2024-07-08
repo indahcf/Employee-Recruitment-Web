@@ -82,23 +82,26 @@ Berikut adalah tools yang kami gunakan untuk membangun aplikasi:
 10. Riwayat Lamaran Pekerjaan
 
    ![21](https://github.com/indahcf/indahcf.github.io/assets/104883886/00c63ced-33e9-4806-b742-5969d7bb2e9b)
-   
 
-11. Lamaran Pekerjaan
+11. Ubah Password Pelamar
+    
+    ![23](https://github.com/indahcf/indahcf.github.io/assets/104883886/e2fe97c4-1aa7-4176-b6dc-c73576845a14)
+    
+12. Lamaran Pekerjaan
 
     ![13 1](https://github.com/indahcf/indahcf.github.io/assets/104883886/824e0634-db7f-494e-9075-8e2818f017bd)
     
-12. Detail Lamaran Pekerjaan
+13. Detail Lamaran Pekerjaan
 
     ![14 1](https://github.com/indahcf/indahcf.github.io/assets/104883886/84248b17-46e0-4535-bfea-51bce2348089)
     
     ![14 2](https://github.com/indahcf/indahcf.github.io/assets/104883886/41a4108e-9f6b-4533-b655-205f9ef9388e)
     
-13. Ubah Status Lamaran Pekerjaan
+14. Ubah Status Lamaran Pekerjaan
 
     ![14 4](https://github.com/indahcf/indahcf.github.io/assets/104883886/ee5497e0-0e51-4566-8853-06230a0dcc37)
     
-14. CRUD Users + Ubah Password Users
+15. CRUD Users + Ubah Password Users
 
     ![25](https://github.com/indahcf/indahcf.github.io/assets/104883886/b9b10139-738e-47dc-9448-5ca64ef5206b)
     
@@ -108,12 +111,10 @@ Berikut adalah tools yang kami gunakan untuk membangun aplikasi:
 
     ![29](https://github.com/indahcf/indahcf.github.io/assets/104883886/6d356c24-f084-4790-b30b-35354cb9a640)
 
-15. Ubah Password HRD + Pelamar
+16. Ubah Password HRD 
 
     ![16](https://github.com/indahcf/indahcf.github.io/assets/104883886/2cb15c06-1a82-4170-924e-f35f433f62b5)
-    
-    ![23](https://github.com/indahcf/indahcf.github.io/assets/104883886/e2fe97c4-1aa7-4176-b6dc-c73576845a14)
 
-16. Logout
+17. Logout
 
     ![17](https://github.com/indahcf/indahcf.github.io/assets/104883886/f1e91e40-9629-4777-8b06-f670d0b0718e)
