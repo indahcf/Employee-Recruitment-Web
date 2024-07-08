@@ -8,11 +8,6 @@ Sistem Informasi Penerimaan Pegawai Berbasis Website di PT Noto Teknologi Indone
 
 Sistem Informasi Penerimaan Pegawai Berbasis Website di PT Noto Teknologi Indonesia cocok digunakan untuk seseorang yang sedang mencari pekerjaan dan HRD yang sedang mencari calon pegawai untuk diseleksi menjadi pegawai di PT Noto Teknologi Indonesia.
 
-## Installation
-
-Copy `env` to `.env` and tailor for your app, specifically the baseURL
-and any database settings.
-
 ## Tech Stack
 
 Teknologi yang digunakan dalam membangun sistem ini adalah:
