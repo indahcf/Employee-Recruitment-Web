@@ -99,28 +99,28 @@ Berikut adalah tools yang kami gunakan untuk membangun aplikasi:
     
     ![14 2](https://github.com/indahcf/indahcf.github.io/assets/104883886/41a4108e-9f6b-4533-b655-205f9ef9388e)
     
-15. Ubah Status Lamaran Pekerjaan
+16. Ubah Status Lamaran Pekerjaan
 
     ![14 4](https://github.com/indahcf/indahcf.github.io/assets/104883886/ee5497e0-0e51-4566-8853-06230a0dcc37)
     
-16. Dashboard Admin
+17. Dashboard Admin
     
     ![24](https://github.com/indahcf/indahcf.github.io/assets/104883886/ad2d1cb0-bdec-4c75-898e-152f175853c2)
     
-17. CRUD Users + Ubah Password Users
+18. CRUD Users + Ubah Password Users
 
     ![25](https://github.com/indahcf/indahcf.github.io/assets/104883886/b9b10139-738e-47dc-9448-5ca64ef5206b)
     
     ![26](https://github.com/indahcf/indahcf.github.io/assets/104883886/6e357252-1675-4f20-bfe7-e4ed8d995397)
 
-    ![27](https://github.com/indahcf/Sistem-Informasi-Penerimaan-Pegawai-Berbasis-Website-di-PT-Noto-Teknologi-Indonesia/assets/104883886/cee51838-ba77-4b67-917b-711616398c67)
-
     ![28](https://github.com/indahcf/indahcf.github.io/assets/104883886/ef07c29d-fc3b-4004-8257-c2740e615b13)
 
-18. Ubah Password Admin
+    ![27](https://github.com/indahcf/Sistem-Informasi-Penerimaan-Pegawai-Berbasis-Website-di-PT-Noto-Teknologi-Indonesia/assets/104883886/cee51838-ba77-4b67-917b-711616398c67)
+
+19. Ubah Password Admin
 
     ![29](https://github.com/indahcf/indahcf.github.io/assets/104883886/6d356c24-f084-4790-b30b-35354cb9a640)
 
-19. Logout
+20. Logout
 
     ![17](https://github.com/indahcf/indahcf.github.io/assets/104883886/f1e91e40-9629-4777-8b06-f670d0b0718e)
