@@ -34,6 +34,20 @@ Here are the tools we used to build the application:
 - GitHub: A shared web hosting service for software development projects that uses the Git version control system and internet hosting services.
 - XAMPP: A local server building tool that helps with project development (Apache Server, MySQL Database, and PHP and Perl language interpreters).
 
+## User Credential
+
+a. Admin
+- Email: admin@gmail.com
+- Password: adminultra
+
+b. HRD
+- Email: hrd@gmail.com
+- Password: adminultra
+
+c. Applicants
+- Email: aura@gmail.com
+- Password: adminultra
+
 ## Website Features
 
 1. Landing Page
