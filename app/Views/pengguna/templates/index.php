@@ -47,22 +47,19 @@
         <div class="header-area header-transparrent">
             <div class="headder-top">
                 <div class="container">
-                    <div class="row align-items-center">
-                        <div class="col-lg-3 col-md-2">
+                    <div class="row align-items-center" style="display: flex; align-items: center;">
+                        <div class="col-lg-3 col-md-2 col-6" style="display: flex; align-items: center;">
                             <!-- Logo -->
                             <div class="logo">
                                 <img src="<?= base_url() ?>/img/logo_ultranesia.jpg" alt="" width="45px">
                             </div>
                         </div>
-                        <div class="col-lg-9 col-md-9">
-                            <div class="menu-wrapper">
-                                <!-- Main-menu -->
-                                <div class="main-menu">
-                                </div>
+                        <div class="col-lg-9 col-md-10 col-6" style="display: flex; justify-content: flex-end; align-items: center;">
+                            <div class="menu-wrapper" style="display: flex; justify-content: flex-end; align-items: center;">
                                 <!-- Header-btn -->
-                                <div class="header-btn d-none f-right d-lg-block">
-                                    <a href="<?= route_to('register') ?>" class="btn head-btn1">Register</a>
-                                    <a href="<?= route_to('login') ?>" class="btn head-btn2">Login</a>
+                                <div class="header-btn" style="display: flex;">
+                                    <a href="<?= route_to('register') ?>" class="btn head-btn1" style="margin-left: 10px; padding: 25px 30px; border-radius: 0;">Register</a>
+                                    <a href="<?= route_to('login') ?>" class="btn head-btn2" style="margin-left: 10px; padding: 25px 30px; border-radius: 0;">Login</a>
                                 </div>
                             </div>
                         </div>

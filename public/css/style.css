@@ -371,12 +371,12 @@ hr {
 }
 .head-btn2 {
   background: none;
-  border: 1px solid #fb246a;
+  border: 1px solid #fb246a !important;
   color: #fb246a;
 }
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
   .head-btn2 {
-    padding: 27px 34px;
+    padding: 27px 27px;
   }
 }
 .head-btn2::before {
@@ -387,6 +387,7 @@ hr {
 }
 .head-btn1 {
   margin-right: 5px;
+  border: 1px;
 }
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
   .head-btn1 {

@@ -50,45 +50,67 @@
         <div class="header-area header-transparrent">
             <div class="headder-top">
                 <div class="container">
-                    <div class="row align-items-center">
-                        <div class="col-lg-3 col-md-2">
+                    <div class="row align-items-center" style="display: flex; align-items: center;">
+                        <div class="col-lg-3 col-md-2 col-6" style="display: flex; align-items: center;">
                             <!-- Logo -->
                             <div class="logo">
                                 <img src="<?= base_url() ?>/img/logo_ultranesia.jpg" alt="" width="45px">
                             </div>
                         </div>
-                        <div class="col-lg-9 col-md-9">
-                            <div class="menu-wrapper">
-                                <!-- Main-menu -->
-                                <div class="main-menu">
-                                    <nav class="d-none d-lg-block">
-                                        <ul id="navigation">
-                                            <li><a href="<?= base_url('pelamar/lowongan'); ?>">Lowongan Pekerjaan</a></li>
-                                            <li><a href="<?= base_url('pelamar/riwayat_lamaran'); ?>">Riwayat Lamaran</a></li>
-                                        </ul>
-                                    </nav>
+                        <div class="col-lg-9 col-md-10 col-6" style="display: flex; justify-content: flex-end; align-items: center;">
+                            <div style="display: flex; align-items: center; justify-content: space-between; width: 100%;">
+                                <!-- Menu Wrapper -->
+                                <div class="menu-wrapper" style="flex-grow: 1;">
+                                    <!-- Main-menu -->
+                                    <div class="main-menu">
+                                        <nav class="d-none d-lg-block">
+                                            <ul id="navigation">
+                                                <li><a href="<?= base_url('pelamar/lowongan'); ?>">Lowongan Pekerjaan</a></li>
+                                                <li><a href="<?= base_url('pelamar/riwayat_lamaran'); ?>">Riwayat Lamaran</a></li>
+                                            </ul>
+                                        </nav>
+                                    </div>
                                 </div>
-                                <!-- Header-btn -->
-                                <div class="header-btn d-none f-right d-lg-block">
-                                    <li class="nav-item dropdown no-arrow">
-                                        <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                            <span class="mr-2 d-none d-lg-inline text-dark">Halo, <?= user()->fullname; ?></span>
-                                            <img class="img-profile rounded-circle" width="40px" src="<?= base_url(); ?>/img/<?= user()->user_image; ?>">
+
+                                <!-- Dropdown Icon Menu for Mobile -->
+                                <li class="nav-item dropdown no-arrow d-lg-none" style="margin-right: auto; margin-left: auto;">
+                                    <a class="nav-link dropdown-toggle" href="#" id="userDropdownMobile" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        <span class="mr-2 d-none d-lg-inline text-gray-600 small">Halo, <?= user()->fullname; ?></span>
+                                        <img class="img-profile rounded-circle" src="<?= base_url(); ?>/img/<?= user()->user_image; ?>" style="width: 40px; height: 40px; max-width: 50%;">
+                                    </a>
+                                    <!-- Dropdown - User Information -->
+                                    <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdownMobile" style="z-index: 1050;">
+                                        <a class="dropdown-item" href="<?= base_url('pelamar/ubah_password'); ?>">
+                                            <i class="fas fa-key fa-sm fa-fw mr-2 text-gray-400"></i>
+                                            Ubah Password
                                         </a>
-                                        <!-- Dropdown - User Information -->
-                                        <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
-                                            <a class="dropdown-item" href="<?= base_url('pelamar/ubah_password'); ?>">
-                                                <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
-                                                Ubah Password
-                                            </a>
-                                            <div class="dropdown-divider"></div>
-                                            <a class="dropdown-item" href="<?= base_url('logout'); ?>">
-                                                <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
-                                                Logout
-                                            </a>
-                                        </div>
-                                    </li>
-                                </div>
+                                        <div class="dropdown-divider"></div>
+                                        <a class="dropdown-item" href="<?= base_url('logout'); ?>">
+                                            <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
+                                            Logout
+                                        </a>
+                                    </div>
+                                </li>
+
+                                <!-- Dropdown Topbar for Desktop -->
+                                <li class="nav-item dropdown no-arrow d-none d-lg-block">
+                                    <a class="nav-link dropdown-toggle" href="#" id="userDropdownTopbar" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        <span class="mr-2 d-none d-lg-inline text-dark">Halo, <?= user()->fullname; ?></span>
+                                        <img class="img-profile rounded-circle" src="<?= base_url(); ?>/img/<?= user()->user_image; ?>" style="width: 40px; height: 40px; border-radius: 50%;">
+                                    </a>
+                                    <!-- Dropdown - User Information -->
+                                    <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdownTopbar">
+                                        <a class="dropdown-item" href="<?= base_url('pelamar/ubah_password'); ?>">
+                                            <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
+                                            Ubah Password
+                                        </a>
+                                        <div class="dropdown-divider"></div>
+                                        <a class="dropdown-item" href="<?= base_url('logout'); ?>">
+                                            <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
+                                            Logout
+                                        </a>
+                                    </div>
+                                </li>
                             </div>
                         </div>
                         <!-- Mobile Menu -->
