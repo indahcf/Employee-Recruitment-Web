@@ -1,14 +1,14 @@
-# Website Based Employee Recruitment Information System at PT Noto Teknologi Indonesia
+# Employee Recruitment Web
 
-## What is a Web Based Employee Recruitment Information System at PT Noto Teknologi Indonesia?
+## What is a Employee Recruitment Web?
 
-Website Based Employee Recruitment Information System at PT Noto Teknologi Indonesia is an information system that helps the employee recruitment process at PT Noto Teknologi Indonesia.
+Employee Recruitment Web is an information system that helps the employee recruitment process.
 
 ## For whom?
 
-The Website Based Employee Recruitment Information System at PT Noto Teknologi Indonesia is suitable for someone who is looking for a job and HRD who is looking for prospective employees to be selected as employees at PT Noto Teknologi Indonesia.
+The Employee Recruitment Web is suitable for someone who is looking for a job and HRD who is looking for prospective employees to be selected as employees.
 
-## Who are the users of the Website Based Employee Recruitment Information System at PT Noto Teknologi Indonesia?
+## Who are the users of the Employee Recruitment Web?
 
 - Admin: Admin is a user who has the highest position in the system. Admins can manage users, manage job category data, manage job vacancy data, and manage job application data.
   
